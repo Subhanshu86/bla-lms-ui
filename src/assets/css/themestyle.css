@@ -538,8 +538,19 @@ frenify_typing span {
   (min-resolution: 120dpi) {
   .retina_logo {
     display: block;
+    height: 60px;
+    width: 60px;
   }
   .desktop_logo {
+    display: none;
+    height: 60px;
+    width: 60px;
+  }
+
+  .white-lg-logo {
+    height: 60px;
+    width: 60px;
+    background-color: #f5f5f5;
     display: none;
   }
 }
@@ -1350,10 +1361,10 @@ a.fn__like.has__like .full__like {
 .section_home .section_left {
   padding: 93px 40px 80px;
   border-right: 1px solid var(--techwave-border-color);
-  width: 60%;
+  width: 70%;
 }
 .section_home .section_right {
-  width: 40%;
+  width: 30%;
   padding: 155px 40px;
 }
 .section_home .company_info {
@@ -6394,3 +6405,36 @@ a.fn__like.no_border .fn__svg {
     height: 18px;
   }
 }
+
+/*Custom CSS Start Here*/
+
+.techwave_fn_interactive_list ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 24px; /* spacing between cards */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-sm-logo {
+  height: 60px;
+  width: 60px;
+  background-color: #f5f5f5;
+  display: none;
+}
+.white-lg-logo {
+  height: 60px;
+  width: 60px;
+  background-color: #f5f5f5;
+  display: block;
+}
+/*
+Custom CSS End Here
+*/
