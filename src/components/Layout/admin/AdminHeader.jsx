@@ -1,5 +1,5 @@
 import React from "react";
-
+import axiosInstance from "../../../services/axiosInstance";
 import searchsvg from "../../../assets/Images/search.svg";
 import closesvg from "../../../assets/Images/close.svg";
 
@@ -16,6 +16,10 @@ import billingsvg from "../../../assets/Images/billing.svg";
 import settingsvg from "../../../assets/Images/setting.svg";
 
 const AdminHeader = () => {
+
+ 
+
+
   return (
     <>
       {/* Search Bar Start Here */}
@@ -227,37 +231,38 @@ const AdminHeader = () => {
                 <div className="user_nav">
                   <ul>
                     <li>
-                      <a href="user-profile.html">
+                    
                         <span class="icon">
                           <img src={personsvg} alt="" class="fn__svg" />
                         </span>
                         <span class="text">Profile</span>
-                      </a>
+                 
                     </li>
                     <li>
-                      <a href="user-settings.html">
+                 
                         <span class="icon">
                           <img src={settingsvg} alt="" class="fn__svg" />
                         </span>
                         <span class="text">Settings</span>
-                      </a>
+                  
                     </li>
                     <li>
-                      <a href="user-billing.html">
+                
                         <span class="icon">
                           <img src={billingsvg} alt="" class="fn__svg" />
                         </span>
                         <span class="text">Billing</span>
-                      </a>
+                 
                     </li>
-                    <li>
-                      <a href="sign-in.html">
-                        <span class="icon">
-                          <img src={logoutsvg} alt="" class="fn__svg" />
-                        </span>
-                        <span class="text">Log Out</span>
-                      </a>
-                    </li>
+                    {/* <li>
+                   <button type="button" onClick={logout}>
+  <span className="icon">
+    <img src={logoutsvg} alt="" className="fn__svg" />
+  </span>
+  <span className="text">Log Out</span>
+</button>
+
+                    </li> */}
                   </ul>
                 </div>
               </div>

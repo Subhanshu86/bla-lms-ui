@@ -1,10 +1,28 @@
 import React from "react";
 import logodesktopfull from "../../assets/Images/logo-desktop-full.png";
+import axiosInstance from "../../services/axiosInstance";
 import arrowsvg from "../../assets/Images/arrow.svg";
 import imgsvg from "../../assets/Images/image.svg";
 import chatsvg from "../../assets/Images/chat.svg";
 
 const AdminDashboard = () => {
+
+   const logout = async () => {
+       console.log("Logout clicked")
+    try {
+     
+      await axiosInstance.post("/official/auth/logout");
+    } catch (err) {
+      console.error("Logout failed", err);
+    } finally {
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+      localStorage.removeItem("role");
+  
+      window.location.href = "/login";
+    }
+  };
+
   return (
     <>
       <div className="techwave_fn_content">
@@ -20,7 +38,19 @@ const AdminDashboard = () => {
                   <p className="desc">
                     Generate your ideas into stunning visuals
                   </p>
+
+                   
+                                     <button type="button" onClick={logout}>
+                    <span className="icon">
+                      {/* <img src={logoutsvg} alt="" className="fn__svg" /> */}
+                    </span>
+                    <span className="text">Log Out</span>
+                  </button>
+                  
+                                    
                 </div>
+
+
 
                 {/* Interactive List */}
                 <div className="techwave_fn_interactive_list">
