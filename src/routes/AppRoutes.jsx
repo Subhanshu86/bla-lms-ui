@@ -8,6 +8,7 @@ import StudentRegister from "../pages/auth/StudentRegister";
 import ProtectedRoute from "./ProtectedRoute";
 import InstructorLayout from "../components/Layout/instructor/InstructorLayout";
 import InstructorDashboard from "../pages/instructor/InstructorDashboard";
+import CreateInstructor from "../pages/admin/CreateInstructor";
 
 const AppRoutes = () => {
   return (
@@ -24,13 +25,14 @@ const AppRoutes = () => {
         <Route element={<ProtectedRoute allowedRole="Admin" />}>
           <Route element={<AdminLayout />}>
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/addinstructor" element={<CreateInstructor />} />
           </Route>
         </Route>
 
         <Route element={<ProtectedRoute allowedRole="Instructor" />}>
           <Route element={<InstructorLayout />}>
             <Route
-              path="/Instructor/dashboard"
+              path="/instructor/dashboard"
               element={<InstructorDashboard />}
             />
           </Route>

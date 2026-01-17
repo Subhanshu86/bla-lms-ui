@@ -50,6 +50,8 @@ const OfficialLogin = () => {
       localStorage.setItem("refreshToken", res.data.refreshToken);
       localStorage.setItem("role", res.data.role);
       localStorage.setItem("fullName", res.data.fullName);
+      localStorage.setItem("email", res.data.email);
+      localStorage.setItem("userType", "official");
 
       // Redirect based on role
       if (res.data.role === "Admin") {

@@ -6,6 +6,8 @@ import imgsvg from "../../assets/Images/image.svg";
 import chatsvg from "../../assets/Images/chat.svg";
 
 const AdminDashboard = () => {
+  const fullName = localStorage.getItem("fullName");
+  const email = localStorage.getItem("email");
   const logout = async () => {
     console.log("Logout clicked");
     try {
@@ -43,6 +45,9 @@ const AdminDashboard = () => {
                     </span>
                     <span className="text">Log Out</span>
                   </button>
+
+                  <p>{fullName}</p>
+                  <p>{email}</p>
                 </div>
 
                 {/* Interactive List */}

@@ -296,9 +296,16 @@ frenify_typing {
 .container {
   width: 100%;
   max-width: 1400px;
-  padding: 0 40px;
+  padding: 117px 130px;
   margin: 0 auto;
 }
+
+.techwave_fn_footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 .container.wide {
   max-width: 1680px;
 }
@@ -1319,7 +1326,7 @@ a.fn__like.has__like .full__like {
 }
 .techwave_fn_footer_content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   -ms-align-items: center;
   align-items: center;
 }
@@ -1337,6 +1344,15 @@ a.fn__like.has__like .full__like {
   padding: 0;
   font-size: 14px;
   letter-spacing: 0.5px;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright > a {
+  text-decoration: none;
+  color: #8768f8;
 }
 .techwave_fn_footer .menu_items ul {
   display: flex;
@@ -1489,6 +1505,10 @@ a.fn__like.has__like .full__like {
 .techwave_fn_searchbar .search__input {
   font-family: var(--techwave-heading-font-family);
 }
+
+.techwave_fn_pagetitle .title {
+  margin-bottom: 1rem;
+}
 .techwave_fn_interactive_list .arrow {
   display: block;
   width: 50px;
@@ -1614,8 +1634,9 @@ a.fn__like.has__like .full__like {
   }
 }
 .techwave_fn_pagetitle {
-  padding: 34px 40px;
-  border-bottom: 1px solid var(--techwave-border-color);
+  /* padding: 34px 40px; */
+  /* border-bottom: 1px solid var(--techwave-border-color); */
+  margin-bottom: 1rem;
 }
 .techwave_fn_pagetitle .title {
   margin: 0;
@@ -6144,8 +6165,15 @@ a.fn__like.no_border .fn__svg {
     --techwave-header-height: 80px;
   }
   .container {
-    padding: 0 20px;
+    padding: 170px 48px;
   }
+
+  .techwave_fn_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
   .techwave_fn_image_generation_page .sidebar__trigger,
   .techwave_fn_leftpanel .desktop_closer,
   .techwave_fn_pricing .pricing__content {
@@ -6369,8 +6397,15 @@ a.fn__like.no_border .fn__svg {
 }
 @media (max-width: 480px) {
   .container {
-    padding: 0 10px;
+    padding: 142px 25px;
   }
+
+  .techwave_fn_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
   .fn__generation_item,
   .techwave_fn_accordion .acc__content,
   .techwave_fn_accordion .acc__header,

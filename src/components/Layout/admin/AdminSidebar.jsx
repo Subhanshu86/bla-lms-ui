@@ -92,12 +92,12 @@ const AdminSidebar = () => {
                   <span className="icon">
                     <img src={homesvg} alt="" className="fn__svg" />
                   </span>
-                  <span className="text">Home</span>
+                  <span className="text">Dashboard</span>
                 </Link>
               </li>
 
               <li>
-                <a
+                {/* <a
                   href="/community-feed"
                   className="fn__tooltip menu__item"
                   data-position="right"
@@ -106,8 +106,20 @@ const AdminSidebar = () => {
                   <span className="icon">
                     <img src={communitysvg} alt="" className="fn__svg" />
                   </span>
-                  <span className="text">Community Feed</span>
-                </a>
+                  <span className="text">Create Instructor</span>
+                </a> */}
+
+                <Link
+                  className="fn__tooltip menu__item"
+                  data-position="right"
+                  title="Dashboard"
+                  to="/admin/addinstructor"
+                >
+                  <span className="icon">
+                    <img src={communitysvg} alt="" className="fn__svg" />
+                  </span>
+                  <span className="text">Create Instructor</span>
+                </Link>
               </li>
 
               <li>
