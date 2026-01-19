@@ -23,7 +23,9 @@ const OfficialLogin = () => {
       setOtpSent(true);
     } catch (err) {
       alert(
-        err.response?.data?.message || err.response?.data || "Error sending OTP"
+        err.response?.data?.message ||
+          err.response?.data ||
+          "Error sending OTP",
       );
     } finally {
       setLoading(false);
